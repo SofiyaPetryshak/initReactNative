@@ -1,17 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import Navigator from './routes/homeStack'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hi, my ReactNative app!</Text>
-      <Button
-        title="Press me"
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      <StatusBar style="auto" /> 
-    </View>
+    <Navigator/>
   );
 }
 
