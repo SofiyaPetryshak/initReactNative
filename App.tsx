@@ -1,13 +1,9 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Navigator from './routes/homeStack'
-import BottomNavigation from './routes/tabNavigation'
+import React from 'react'
 
+import BottomNavigation from './src/routes/tabNavigation'
 
-export default function App() {
+export default function App () {
   return (
-    <BottomNavigation/>
-  );
+    <BottomNavigation />
+  )
 }
-
-
