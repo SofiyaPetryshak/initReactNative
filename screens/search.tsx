@@ -2,10 +2,10 @@ import React from 'react'
 import {View, Text} from 'react-native'
 import {globalStyles} from '../styles/global'
 
-export default function MyAccount() {
+export default function SearchScreen() {
     return (
         <View style={globalStyles.container}>
-            <Text>Sales Screen</Text>
+            <Text >Search Screen</Text>
         </View>
     )
 }
