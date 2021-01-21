@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 
-import { globalStyles } from '$src/styles/global'
+import { globalStyles } from '../styles/global'
 
 export default function HomeScreen ({ navigation }: { navigation: any }) {
   return (
