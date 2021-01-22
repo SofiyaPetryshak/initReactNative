@@ -1,18 +1,24 @@
 import * as React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import HomeScreen from '../screens/home'
-import Sales from '../screens/sales'
+import BottomNavigation from './tabNavigation'
+import WishModalScreen from './wishModal'
 
-const HomeStack = createStackNavigator()
-
-function HomeStackScreen () {
+const RootStack = createStackNavigator()
+function RootStackScreen () {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name='Home' component={HomeScreen} />
-      <HomeStack.Screen name='Sales' component={Sales} />
-    </HomeStack.Navigator>
+    <NavigationContainer>
+      <RootStack.Navigator mode='modal'>
+        <RootStack.Screen
+          name='Main'
+          component={BottomNavigation}
+          options={{ headerShown: false }}
+        />
+        <RootStack.Screen name='Wish' component={WishModalScreen} />
+      </RootStack.Navigator>
+    </NavigationContainer>
   )
 }
 
-export { HomeStackScreen }
+export default RootStackScreen
