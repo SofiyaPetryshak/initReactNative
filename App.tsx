@@ -1,9 +1,9 @@
 import React from 'react'
 
-import BottomNavigation from './src/routes/tabNavigation'
+import RootStackScreen from './src/routes/stackNavigation'
 
 export default function App () {
   return (
-    <BottomNavigation />
+    <RootStackScreen />
   )
 }

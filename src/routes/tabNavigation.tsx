@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons'
 
 import BagScreen from '../screens/bag'
+import HomeScreen from '../screens/home'
 import MyAccountScreen from '../screens/myAccount'
+import Sales from '../screens/sales'
 import SearchScreen from '../screens/search'
 import WishesScreen from '../screens/wishes'
-import { HomeStackScreen } from './stackNavigation'
 
 const Tab = createBottomTabNavigator()
 
@@ -47,29 +48,38 @@ const getIconName = (focused: boolean, route: RouteName): IconName => {
   }
 }
 
+const HomeStack = createStackNavigator()
+
+function HomeStackScreen () {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen name='Home' component={HomeScreen} />
+      <HomeStack.Screen name='Sales' component={Sales} />
+    </HomeStack.Navigator>
+  )
+}
+
 export default function BottomNavigation () {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: function Icon ({ focused, color, size }: {focused: boolean, color: string, size: number}) {
-            const iconName = getIconName(focused, route.name as RouteName)
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: function Icon ({ focused, color, size }: {focused: boolean, color: string, size: number}) {
+          const iconName = getIconName(focused, route.name as RouteName)
 
-            return <Ionicons name={iconName} size={size} color={color} />
-          },
-        })}
-        tabBarOptions={{
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
-          showLabel: false,
-        }}
-      >
-        <Tab.Screen name='HomeScreen' component={HomeStackScreen} />
-        <Tab.Screen name='SearchScreen' component={SearchScreen} />
-        <Tab.Screen name='BagScreen' component={BagScreen} />
-        <Tab.Screen name='WishesScreen' component={WishesScreen} />
-        <Tab.Screen name='MyAccountScreen' component={MyAccountScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+          return <Ionicons name={iconName} size={size} color={color} />
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+        showLabel: false,
+      }}
+    >
+      <Tab.Screen name='HomeScreen' component={HomeStackScreen} />
+      <Tab.Screen name='SearchScreen' component={SearchScreen} />
+      <Tab.Screen name='BagScreen' component={BagScreen} />
+      <Tab.Screen name='WishesScreen' component={WishesScreen} />
+      <Tab.Screen name='MyAccountScreen' component={MyAccountScreen} />
+    </Tab.Navigator>
   )
 }
