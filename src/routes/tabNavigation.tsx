@@ -118,7 +118,6 @@ export default function BottomNavigation () {
 
           return <Ionicons name={iconName} size={size} color={color} />
         },
-
       })}
       tabBarOptions={{
         activeTintColor: 'tomato',
