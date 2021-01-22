@@ -5,7 +5,9 @@ export const WISHES = [
     title: 'Backpack',
     brand: 'VS',
     price: '$100',
-    description: 'nice',
+    description: 'ASOS DESIGN rose gold zipped compartment tote bag with detachable strap',
+    image: './assets/bag.jpeg',
+    rating: '5',
   },
   {
     id: 1,
@@ -13,6 +15,7 @@ export const WISHES = [
     brand: 'Bershka',
     price: '$30',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 2,
@@ -20,6 +23,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 3,
@@ -27,6 +31,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 4,
@@ -34,6 +39,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 5,
@@ -41,6 +47,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 6,
@@ -48,6 +55,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 7,
@@ -55,6 +63,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 8,
@@ -62,6 +71,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 9,
@@ -69,6 +79,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 10,
@@ -76,6 +87,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 11,
@@ -83,6 +95,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 12,
@@ -90,6 +103,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 13,
@@ -97,6 +111,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
   {
     id: 14,
@@ -104,6 +119,7 @@ export const WISHES = [
     brand: 'Asos',
     price: '$20',
     description: 'nice',
+    image: './assets/bag.jpeg',
   },
 
 ]

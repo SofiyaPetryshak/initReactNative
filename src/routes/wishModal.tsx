@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { RouteProp } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
@@ -38,18 +38,18 @@ function WishModalScreen ({ route, navigation }:Props) {
   )
 }
 const styles = StyleSheet.create({
-  container:{
+  container: {
+    paddingHorizontal: 20,
     paddingTop: 45,
-    paddingHorizontal:20,
 
   },
-  itemName:{
-    fontSize:24,
-    marginBottom:10
+  itemDetails: {
+    fontSize: 18,
   },
-  itemDetails:{
-    fontSize:18
-  }
+  itemName: {
+    fontSize: 24,
+    marginBottom: 10,
+  },
 
 })
 export default WishModalScreen
