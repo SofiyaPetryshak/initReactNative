@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons'
 
+import ScreenHeader from '../components/screenHeader'
 import BagScreen from '../screens/bag'
 import HomeScreen from '../screens/home'
 import MyAccountScreen from '../screens/myAccount'
@@ -58,6 +59,55 @@ function HomeStackScreen () {
     </HomeStack.Navigator>
   )
 }
+const SearchStack = createStackNavigator()
+
+function SearchStackScreen () {
+  return (
+    <SearchStack.Navigator>
+      <SearchStack.Screen name='Search' component={SearchScreen} />
+    </SearchStack.Navigator>
+  )
+}
+
+const BagStack = createStackNavigator()
+
+function BagStackScreen () {
+  return (
+    <BagStack.Navigator>
+      <BagStack.Screen name='My bag' component={BagScreen} />
+    </BagStack.Navigator>
+  )
+}
+
+const WishesStack = createStackNavigator()
+
+function WishesStackScreen () {
+  return (
+    <WishesStack.Navigator>
+      <WishesStack.Screen name='Wishes' component={WishesScreen} />
+    </WishesStack.Navigator>
+  )
+}
+
+const MyAccountStack = createStackNavigator()
+
+function MyAccountStackScreen () {
+  return (
+    <MyAccountStack.Navigator>
+      <MyAccountStack.Screen name='My Account' component={MyAccountScreen} />
+    </MyAccountStack.Navigator>
+  )
+}
+
+// const myOptions: object = {
+//   headerStyle: {
+//     backgroundColor: 'tomato',
+//   },
+//   headerTintColor: '#fff',
+//   headerTitleStyle: {
+//     fontWeight: 'bold',
+//   },
+// }
 
 export default function BottomNavigation () {
   return (
@@ -68,18 +118,20 @@ export default function BottomNavigation () {
 
           return <Ionicons name={iconName} size={size} color={color} />
         },
+
       })}
       tabBarOptions={{
         activeTintColor: 'tomato',
         inactiveTintColor: 'gray',
         showLabel: false,
       }}
+
     >
       <Tab.Screen name='HomeScreen' component={HomeStackScreen} />
-      <Tab.Screen name='SearchScreen' component={SearchScreen} />
-      <Tab.Screen name='BagScreen' component={BagScreen} />
-      <Tab.Screen name='WishesScreen' component={WishesScreen} />
-      <Tab.Screen name='MyAccountScreen' component={MyAccountScreen} />
+      <Tab.Screen name='SearchScreen' component={SearchStackScreen} />
+      <Tab.Screen name='BagScreen' component={BagStackScreen} />
+      <Tab.Screen name='WishesScreen' component={WishesStackScreen} />
+      <Tab.Screen name='MyAccountScreen' component={MyAccountStackScreen} />
     </Tab.Navigator>
   )
 }

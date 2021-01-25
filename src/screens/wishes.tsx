@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { FlatList, SafeAreaView, StyleProp, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack'
 
-import ScreenHeader from '../components/screenHeader'
 import { globalStyles } from '../styles/global'
+import { WISHES } from '../wishes'
 
 interface Wish {
   id:number;
@@ -13,30 +13,6 @@ interface Wish {
   price: string;
   description: string;
 }
-
-const WISHES = [
-  {
-    id: 0,
-    title: 'Backpack',
-    brand: 'VS',
-    price: '$100',
-    description: 'nice',
-  },
-  {
-    id: 1,
-    title: 'Skirt',
-    brand: 'Bershka',
-    price: '$30',
-    description: 'nice',
-  },
-  {
-    id: 2,
-    title: 'Top',
-    brand: 'Asos',
-    price: '$20',
-    description: 'nice',
-  },
-]
 
 interface WishItemProps {
   item: Wish;
@@ -89,7 +65,6 @@ const WishesScreen = ({ navigation }: Props) => {
   }
   return (
     <View style={globalStyles.container}>
-      <ScreenHeader screenName='Wishes' />
 
       <SafeAreaView>
         <FlatList

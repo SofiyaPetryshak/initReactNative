@@ -13,9 +13,18 @@ function RootStackScreen () {
         <RootStack.Screen
           name='Main'
           component={BottomNavigation}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            headerTitle: 'Wishes',
+          }}
         />
-        <RootStack.Screen name='Wish' component={WishModalScreen} />
+        <RootStack.Screen
+          name='Wish'
+          component={WishModalScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
       </RootStack.Navigator>
     </NavigationContainer>
   )
