@@ -3,11 +3,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 
-import BagScreen from '$src/screens/bag'
-import HomeScreen from '$src/screens/home'
-import MyAccountScreen from '$src/screens/myAccount'
-import SearchScreen from '$src/screens/search'
-import WishesScreen from '$src/screens/wishes'
+import BagScreen from '../screens/bag'
+import MyAccountScreen from '../screens/myAccount'
+import SearchScreen from '../screens/search'
+import WishesScreen from '../screens/wishes'
+import { HomeStackScreen } from './stackNavigation'
 
 const Tab = createBottomTabNavigator()
 
@@ -61,9 +61,10 @@ export default function BottomNavigation () {
         tabBarOptions={{
           activeTintColor: 'tomato',
           inactiveTintColor: 'gray',
+          showLabel: false,
         }}
       >
-        <Tab.Screen name='HomeScreen' component={HomeScreen} />
+        <Tab.Screen name='HomeScreen' component={HomeStackScreen} />
         <Tab.Screen name='SearchScreen' component={SearchScreen} />
         <Tab.Screen name='BagScreen' component={BagScreen} />
         <Tab.Screen name='WishesScreen' component={WishesScreen} />
