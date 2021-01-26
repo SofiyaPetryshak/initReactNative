@@ -4,13 +4,9 @@ import { RouteProp } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons'
 
-interface Wish {
-  id:number;
-  title: string;
-  brand: string;
-  price: string;
-  description: string;
-}
+import { Wish } from '../types/types'
+
+import Slider from '$src/components/slider'
 
 type WishStackParamList = {
   Wish: { item: Wish }
@@ -28,7 +24,8 @@ function WishModalScreen ({ route, navigation }:Props) {
   const { item } = route.params
   return (
     <View style={styles.container}>
-      <Ionicons name='close' size={30} onPress={() => navigation.goBack()} />
+      <Ionicons style={{ marginLeft: 20 }} name='close' size={30} onPress={() => navigation.goBack()} />
+      <Slider images={item.images} />
       <Text style={styles.itemName}>{item.title}</Text>
       <Text style={styles.itemDetails}>Price: {item.price} {'\n'}
         Brand: {item.brand} {'\n'}
@@ -39,8 +36,7 @@ function WishModalScreen ({ route, navigation }:Props) {
 }
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 20,
-    paddingTop: 45,
+    paddingTop: 30,
 
   },
   itemDetails: {

@@ -6,16 +6,8 @@ import { StackNavigationProp } from '@react-navigation/stack'
 
 import ScreenHeader from '../components/screenHeader'
 import { globalStyles } from '../styles/global'
+import { Wish } from '../types/types'
 import { WISHES } from '../wishes'
-
-interface Wish {
-  id:number;
-  title: string;
-  brand: string;
-  price: string;
-  description: string;
-  image: string;
-}
 
 interface WishItemProps {
   item: Wish;
@@ -31,7 +23,7 @@ const WishItem = ({ item, onPress }:WishItemProps) => (
         <Image
           style={styles.image}
           resizeMode='cover'
-          source={require('../assets/bag.jpeg')}
+          source={item.images[0]}
         />
         <View>
           <Text style={styles.price}>{item.price}</Text>
