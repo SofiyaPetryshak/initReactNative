@@ -69,9 +69,10 @@ const styles = StyleSheet.create({
     margin: 3,
   },
   pagingText: {
-    color: '#888',
+    color: '#D3D3D3',
     fontSize: (width / 30),
     margin: 3,
+    opacity: 0.8,
   },
   scroll: {
     height,

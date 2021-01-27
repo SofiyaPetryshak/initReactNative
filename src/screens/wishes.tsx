@@ -1,10 +1,9 @@
 /* eslint-disable react-native/no-color-literals */
 import React, { useState } from 'react'
-import { FlatList, Image, SafeAreaView, StyleProp, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
-import { Button, Card, Icon, ListItem } from 'react-native-elements'
+import { FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { Button, Card } from 'react-native-elements'
 import { StackNavigationProp } from '@react-navigation/stack'
 
-import ScreenHeader from '../components/screenHeader'
 import { globalStyles } from '../styles/global'
 import { Wish } from '../types/types'
 import { WISHES } from '../wishes'
@@ -17,8 +16,6 @@ interface WishItemProps {
 const WishItem = ({ item, onPress }:WishItemProps) => (
   <TouchableOpacity onPress={() => onPress(item)}>
     <Card>
-      <Card.Title>{item.title}</Card.Title>
-      <Card.Divider />
       <View style={styles.container}>
         <Image
           style={styles.image}
@@ -27,7 +24,7 @@ const WishItem = ({ item, onPress }:WishItemProps) => (
         />
         <View>
           <Text style={styles.price}>{item.price}</Text>
-          <Text style={styles.description}>{item.description}</Text>
+          <Text style={styles.title}>{item.title}</Text>
         </View>
 
       </View>
@@ -84,10 +81,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
   },
-  description: {
-    fontSize: 15,
-    maxWidth: 200,
-  },
   image: {
     height: 150,
     marginRight: 20,
@@ -97,6 +90,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
+  },
+  title: {
+    fontSize: 15,
+    maxWidth: 200,
   },
 })
 
