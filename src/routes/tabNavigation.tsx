@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons'
 
-import ScreenHeader from '../components/screenHeader'
 import BagScreen from '../screens/bag'
 import HomeScreen from '../screens/home'
 import MyAccountScreen from '../screens/myAccount'
@@ -98,16 +97,6 @@ function MyAccountStackScreen () {
     </MyAccountStack.Navigator>
   )
 }
-
-// const myOptions: object = {
-//   headerStyle: {
-//     backgroundColor: 'tomato',
-//   },
-//   headerTintColor: '#fff',
-//   headerTitleStyle: {
-//     fontWeight: 'bold',
-//   },
-// }
 
 export default function BottomNavigation () {
   return (

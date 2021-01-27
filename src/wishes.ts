@@ -6,9 +6,9 @@ import bag3 from './assets/bag3.jpeg'
 export const WISHES = [
   {
     id: 0,
-    title: 'Backpack',
+    title: 'ASOS DESIGN bag with detachable strap',
     brand: 'VS',
-    price: '$100',
+    price: '$100.00',
     description: 'ASOS DESIGN rose gold zipped compartment tote bag with detachable strap',
     images: [
       bag,
@@ -16,6 +16,8 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    liked: true,
+    color: 'black',
   },
   {
     id: 1,
@@ -29,6 +31,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 2,
@@ -42,6 +45,8 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    liked: true,
+    color: 'black',
   },
   {
     id: 3,
@@ -55,6 +60,8 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    liked: true,
+    color: 'black',
   },
   {
     id: 4,
@@ -68,6 +75,8 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    liked: true,
+    color: 'black',
   },
   {
     id: 5,
@@ -81,6 +90,8 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    liked: true,
+    color: 'black',
   },
   {
     id: 6,
@@ -94,6 +105,8 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    liked: true,
+    color: 'black',
   },
   {
     id: 7,
@@ -107,6 +120,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 8,
@@ -120,6 +134,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 9,
@@ -133,6 +148,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 10,
@@ -146,6 +162,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 11,
@@ -159,6 +176,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 12,
@@ -172,6 +190,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 13,
@@ -185,6 +204,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
   {
     id: 14,
@@ -198,6 +218,7 @@ export const WISHES = [
       bag2,
       bag3,
     ],
+    color: 'black',
   },
 
 ]

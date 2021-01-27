@@ -7,5 +7,7 @@ interface Wish {
   price: string;
   description: string;
   images: ImageSourcePropType[];
+  // liked: boolean;
+  color: string;
 }
 export { Wish }
