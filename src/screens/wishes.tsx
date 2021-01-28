@@ -1,12 +1,12 @@
 /* eslint-disable react-native/no-color-literals */
 import React, { useState } from 'react'
-import { FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
-import { Button, Card } from 'react-native-elements'
+import { FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Card } from 'react-native-elements'
 import { StackNavigationProp } from '@react-navigation/stack'
 
+import itemStore from '../stores/itemStore'
 import { globalStyles } from '../styles/global'
 import { Wish } from '../types/types'
-import { WISHES } from '../wishes'
 
 interface WishItemProps {
   item: Wish;
@@ -67,7 +67,7 @@ const WishesScreen = ({ navigation }: Props) => {
 
       <SafeAreaView>
         <FlatList
-          data={WISHES}
+          data={itemStore.likedItems}
           renderItem={renderItem}
           keyExtractor={(item: Wish) => `Wish-${item.id}`}
           extraData={selectedId}

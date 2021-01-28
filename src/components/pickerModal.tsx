@@ -43,7 +43,7 @@ const PickerModal: React.FC<Props> = ({
             </TouchableOpacity>
 
           </View>
-          <Picker selectedValue={pickerValue} onValueChange={(value) => { setPickerValue(value.toString()) }}>
+          <Picker selectedValue={pickerValue} onValueChange={(value:number|string) => { setPickerValue(value.toString()) }}>
             {items.map(item => <Picker.Item key={items.indexOf(item)} value={item} label={item} />)}
           </Picker>
         </View>
