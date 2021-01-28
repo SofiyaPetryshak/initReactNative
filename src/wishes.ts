@@ -32,6 +32,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: true,
   },
   {
     id: 2,
@@ -121,6 +122,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: false,
   },
   {
     id: 8,
@@ -135,6 +137,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: false,
   },
   {
     id: 9,
@@ -149,6 +152,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: true,
   },
   {
     id: 10,
@@ -163,6 +167,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: true,
   },
   {
     id: 11,
@@ -177,6 +182,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: false,
   },
   {
     id: 12,
@@ -191,6 +197,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: false,
   },
   {
     id: 13,
@@ -205,6 +212,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: true,
   },
   {
     id: 14,
@@ -219,6 +227,7 @@ export const WISHES = [
       bag3,
     ],
     color: 'black',
+    liked: true,
   },
 
 ]

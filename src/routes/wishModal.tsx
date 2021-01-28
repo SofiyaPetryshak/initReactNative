@@ -5,11 +5,14 @@ import { StyleSheet, Text, View } from 'react-native'
 import { Button, Divider } from 'react-native-elements'
 import { RouteProp } from '@react-navigation/native'
 import { StackNavigationProp } from '@react-navigation/stack'
+import { observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
 import PickerModal from '../components/pickerModal'
 import Slider from '../components/slider'
 import { Wish } from '../types/types'
+
+import itemStore from '$src/stores/itemStore'
 
 const SIZES = ['s', 'm', 'l']
 
@@ -41,9 +44,10 @@ function WishModalScreen ({ route, navigation }:Props) {
       <View style={styles.priceSection}>
         <Text style={styles.itemPrice}>{item.price}</Text>
         <Ionicons
-          name='heart'
+          name={item.liked ? 'heart' : 'heart-outline'}
           size={30}
           color='#EE4622'
+          onPress={() => { itemStore.toggleLike(item.id) }}
         />
       </View>
       <Divider style={styles.divider} />
@@ -118,4 +122,4 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 })
-export default WishModalScreen
+export default observer(WishModalScreen)
