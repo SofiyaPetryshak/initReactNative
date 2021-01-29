@@ -1,7 +1,8 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react-native/no-color-literals */
 import React, { useState } from 'react'
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import { Divider } from 'react-native-elements'
+import { Button, Divider } from 'react-native-elements'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { observer } from 'mobx-react'
 
@@ -37,6 +38,7 @@ const BagScreen = ({ navigation }: Props) => {
         item={item}
         onPress={() => onItemPress(item)}
         onSwipeFromRight={() => bagStore.removeFromBag(item)}
+        rightActionText='Remove from bag'
       />
     )
   }
@@ -45,15 +47,35 @@ const BagScreen = ({ navigation }: Props) => {
       <View style={styles.header}>
         <Text>{bagStore.countItemsInBag} item(s): Total <Text>${bagStore.totalAmount.toFixed(2)}</Text></Text>
       </View>
-      <View>
-        <SafeAreaView>
-          <FlatList
-            data={bagStore.getItemsInBag}
-            renderItem={renderItem}
-            keyExtractor={(item: Item) => `Item-${item.id}`}
-            extraData={selectedId}
+      <SafeAreaView>
+        <FlatList
+          data={bagStore.getItemsInBag}
+          renderItem={renderItem}
+          keyExtractor={(item: Item) => `Item-${item.id}`}
+          extraData={selectedId}
+        />
+      </SafeAreaView>
+      <View style={styles.bottomButtonsContainer}>
+        <View style={styles.bottomButtons}>
+          <Button
+            title='CHECKOUT'
+            buttonStyle={{
+              backgroundColor: '#1D8348',
+              alignSelf: 'center',
+              paddingHorizontal: 15,
+            }}
+            titleStyle={{ fontWeight: 'bold' }}
           />
-        </SafeAreaView>
+          <Button
+            title='APPLE PAY'
+            buttonStyle={{
+              backgroundColor: '#000',
+              alignSelf: 'center',
+              paddingHorizontal: 15,
+            }}
+            titleStyle={{ fontWeight: 'bold' }}
+          />
+        </View>
       </View>
 
     </View>
@@ -61,6 +83,19 @@ const BagScreen = ({ navigation }: Props) => {
 }
 
 const styles = StyleSheet.create({
+  bottomButtons: {
+    backgroundColor: '#fff',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingVertical: 15,
+  },
+  bottomButtonsContainer: {
+    bottom: 0,
+    flex: 1,
+    justifyContent: 'flex-end',
+    position: 'absolute',
+    width: '100%',
+  },
   header: {
     alignItems: 'center',
     backgroundColor: '#fff',

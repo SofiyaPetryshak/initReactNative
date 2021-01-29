@@ -9,5 +9,6 @@ interface Item {
   images: ImageSourcePropType[];
   liked: boolean;
   color: string;
+  quantity:number;
 }
 export { Item }

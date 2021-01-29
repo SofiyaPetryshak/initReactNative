@@ -12,7 +12,7 @@ class BagStore {
   @computed get totalAmount () {
     let total = 0
     for (const item of this.itemsInBag) {
-      total = total + (item.price)
+      total = total + (item.price * item.quantity)
     }
     return total
   }
@@ -20,6 +20,7 @@ class BagStore {
   @action.bound
   addToBag (item:Item) {
     this.itemsInBag.push(item)
+    item.quantity++
   }
 
   @action.bound
@@ -28,6 +29,11 @@ class BagStore {
     if (index >= 0) {
       this.itemsInBag.splice(index, 1)
     }
+  }
+
+  @action.bound
+  increaseQuantity (item:Item) {
+    item.quantity++
   }
 
   @computed get getItemsInBag () {

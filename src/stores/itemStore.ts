@@ -22,6 +22,10 @@ class ItemStore {
   @action toggleLike (id:number) {
     this.items[id].liked = !this.items[id].liked
   }
+
+  @action removeFromLiked (id:number) {
+    this.items[id].liked = false
+  }
 }
 
 export default ItemStore

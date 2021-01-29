@@ -1,6 +1,10 @@
+/* eslint-disable react-native/no-inline-styles */
 import * as React from 'react'
+import { View } from 'react-native'
+import { Badge } from 'react-native-elements'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
+import { Observer, observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
 import BagScreen from '../screens/bag'
@@ -9,6 +13,8 @@ import MyAccountScreen from '../screens/myAccount'
 import Sales from '../screens/sales'
 import SearchScreen from '../screens/search'
 import WishesScreen from '../screens/wishes'
+
+import { bagStore } from '$src/stores'
 
 const Tab = createBottomTabNavigator()
 
@@ -98,14 +104,31 @@ function MyAccountStackScreen () {
   )
 }
 
-export default function BottomNavigation () {
+function BottomNavigation () {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: function Icon ({ focused, color, size }: {focused: boolean, color: string, size: number}) {
           const iconName = getIconName(focused, route.name as RouteName)
+          if (route.name === 'BagScreen' && bagStore.countItemsInBag > 0) {
+            return (
+              <View>
+                <Ionicons name={iconName} size={size} color={color} />
+                <Observer>
+                  {
+                    () => <Badge
+                      status='success'
+                      containerStyle={{ position: 'absolute', top: -4, right: -4 }}
+                      value={bagStore.countItemsInBag}
+                    />
+                  }
+                </Observer>
 
-          return <Ionicons name={iconName} size={size} color={color} />
+              </View>
+            )
+          } else {
+            return <Ionicons name={iconName} size={size} color={color} />
+          }
         },
       })}
       tabBarOptions={{
@@ -123,3 +146,5 @@ export default function BottomNavigation () {
     </Tab.Navigator>
   )
 }
+
+export default observer(BottomNavigation)

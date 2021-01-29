@@ -9,7 +9,7 @@ import { observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
 import createInfoAlert from '../components/infoAlert'
-import PickerModal from '../components/pickerModal'
+import CustomPicker from '../components/picker'
 import Slider from '../components/slider'
 import { Item } from '../types/types'
 
@@ -42,7 +42,7 @@ function ItemModalScreen ({ route, navigation }:Props) {
     if (!bagStore.getItemsInBag.includes(item)) {
       bagStore.addToBag(item)
     } else {
-      createInfoAlert('This item is already in the bag')
+      bagStore.increaseQuantity(item)
     }
     navigation.goBack()
   }
@@ -69,7 +69,7 @@ function ItemModalScreen ({ route, navigation }:Props) {
           type='clear'
           onPress={() => setShowPicker('size')}
         />
-        <PickerModal
+        <CustomPicker
           items={SIZES}
           title={showPicker}
           visible={Boolean(showPicker)}

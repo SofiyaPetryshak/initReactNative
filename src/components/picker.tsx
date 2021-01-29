@@ -13,7 +13,7 @@ type Props = {
   value?:string;
 }
 
-const PickerModal: React.FC<Props> = ({
+const CustomPicker: React.FC<Props> = ({
   visible,
   items,
   title,
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default PickerModal
+export default CustomPicker
