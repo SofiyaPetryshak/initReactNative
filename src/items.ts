@@ -18,6 +18,7 @@ export const ITEMS = [
     ],
     liked: true,
     color: 'black',
+    quantity: 0,
   },
   {
     id: 1,
@@ -33,6 +34,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: true,
+    quantity: 0,
   },
   {
     id: 2,
@@ -48,6 +50,7 @@ export const ITEMS = [
     ],
     liked: true,
     color: 'black',
+    quantity: 0,
   },
   {
     id: 3,
@@ -63,6 +66,7 @@ export const ITEMS = [
     ],
     liked: true,
     color: 'black',
+    quantity: 0,
   },
   {
     id: 4,
@@ -78,6 +82,7 @@ export const ITEMS = [
     ],
     liked: true,
     color: 'black',
+    quantity: 0,
   },
   {
     id: 5,
@@ -93,6 +98,7 @@ export const ITEMS = [
     ],
     liked: true,
     color: 'black',
+    quantity: 0,
   },
   {
     id: 6,
@@ -108,6 +114,7 @@ export const ITEMS = [
     ],
     liked: true,
     color: 'black',
+    quantity: 0,
   },
   {
     id: 7,
@@ -123,6 +130,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: false,
+    quantity: 0,
   },
   {
     id: 8,
@@ -138,6 +146,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: false,
+    quantity: 0,
   },
   {
     id: 9,
@@ -153,6 +162,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: true,
+    quantity: 0,
   },
   {
     id: 10,
@@ -168,6 +178,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: true,
+    quantity: 0,
   },
   {
     id: 11,
@@ -183,6 +194,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: false,
+    quantity: 0,
   },
   {
     id: 12,
@@ -198,6 +210,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: false,
+    quantity: 0,
   },
   {
     id: 13,
@@ -213,6 +226,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: true,
+    quantity: 0,
   },
   {
     id: 14,
@@ -228,6 +242,7 @@ export const ITEMS = [
     ],
     color: 'black',
     liked: true,
+    quantity: 0,
   },
 
 ]

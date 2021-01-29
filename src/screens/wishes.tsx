@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { FlatList, SafeAreaView, View } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack'
+import { observer } from 'mobx-react'
 
 import { itemStore } from '../stores/index'
 import { globalStyles } from '../styles/global'
@@ -34,6 +35,8 @@ const WishesScreen = ({ navigation }: Props) => {
       <SideImageItem
         item={item}
         onPress={() => onWishItemPress(item)}
+        rightActionText='Remove from wishes'
+        onSwipeFromRight={() => itemStore.removeFromLiked(item.id)}
       />
     )
   }
@@ -52,4 +55,4 @@ const WishesScreen = ({ navigation }: Props) => {
   )
 }
 
-export default WishesScreen
+export default observer(WishesScreen)
