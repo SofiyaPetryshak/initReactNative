@@ -4,7 +4,7 @@ interface Wish {
   id:number;
   title: string;
   brand: string;
-  price: string;
+  price: number;
   description: string;
   images: ImageSourcePropType[];
   liked: boolean;

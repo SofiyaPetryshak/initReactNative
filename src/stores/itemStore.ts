@@ -1,12 +1,12 @@
 import { action, computed, observable } from 'mobx'
 
+import { ITEMS } from '$src/items'
 import { Wish } from '$src/types/types'
-import { WISHES } from '$src/wishes'
 
 class ItemStore {
   @observable items:Wish[]
   constructor () {
-    this.items = WISHES
+    this.items = ITEMS
   }
 
   @computed get likedItems () {
@@ -21,7 +21,6 @@ class ItemStore {
 
   @action toggleLike (id:number) {
     this.items[id].liked = !this.items[id].liked
-    console.warn('like')
   }
 }
 

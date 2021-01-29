@@ -42,7 +42,7 @@ function WishModalScreen ({ route, navigation }:Props) {
       <Ionicons style={{ marginLeft: 20 }} name='close' size={30} onPress={() => navigation.goBack()} />
       <Slider images={item.images} />
       <View style={styles.priceSection}>
-        <Text style={styles.itemPrice}>{item.price}</Text>
+        <Text style={styles.itemPrice}>${item.price.toFixed(2)}</Text>
         <Ionicons
           name={item.liked ? 'heart' : 'heart-outline'}
           size={30}

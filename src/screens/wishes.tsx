@@ -23,7 +23,7 @@ const WishItem = ({ item, onPress }:WishItemProps) => (
           source={item.images[0]}
         />
         <View>
-          <Text style={styles.price}>{item.price}</Text>
+          <Text style={styles.price}>{item.price.toFixed(2)}</Text>
           <Text style={styles.title}>{item.title}</Text>
         </View>
 
