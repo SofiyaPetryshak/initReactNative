@@ -3,12 +3,12 @@ import bag1 from './assets/bag1.jpeg'
 import bag2 from './assets/bag2.jpeg'
 import bag3 from './assets/bag3.jpeg'
 
-export const WISHES = [
+export const ITEMS = [
   {
     id: 0,
     title: 'ASOS DESIGN bag with detachable strap',
     brand: 'VS',
-    price: '$100.00',
+    price: 100.00,
     description: 'ASOS DESIGN rose gold zipped compartment tote bag with detachable strap',
     images: [
       bag,
@@ -23,7 +23,7 @@ export const WISHES = [
     id: 1,
     title: 'Skirt',
     brand: 'Bershka',
-    price: '$30',
+    price: 30.00,
     description: 'nice',
     images: [
       bag,
@@ -38,7 +38,7 @@ export const WISHES = [
     id: 2,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 149.99,
     description: 'nice',
     images: [
       bag,
@@ -53,7 +53,7 @@ export const WISHES = [
     id: 3,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 90.00,
     description: 'nice',
     images: [
       bag,
@@ -68,7 +68,7 @@ export const WISHES = [
     id: 4,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 20.99,
     description: 'nice',
     images: [
       bag,
@@ -83,7 +83,7 @@ export const WISHES = [
     id: 5,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 10.00,
     description: 'nice',
     images: [
       bag,
@@ -98,7 +98,7 @@ export const WISHES = [
     id: 6,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 13.00,
     description: 'nice',
     images: [
       bag,
@@ -113,7 +113,7 @@ export const WISHES = [
     id: 7,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 67.99,
     description: 'nice',
     images: [
       bag,
@@ -128,7 +128,7 @@ export const WISHES = [
     id: 8,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 55.90,
     description: 'nice',
     images: [
       bag,
@@ -143,7 +143,7 @@ export const WISHES = [
     id: 9,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 44.43,
     description: 'nice',
     images: [
       bag,
@@ -158,7 +158,7 @@ export const WISHES = [
     id: 10,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 12.99,
     description: 'nice',
     images: [
       bag,
@@ -173,7 +173,7 @@ export const WISHES = [
     id: 11,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 34,
     description: 'nice',
     images: [
       bag,
@@ -188,7 +188,7 @@ export const WISHES = [
     id: 12,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 35.99,
     description: 'nice',
     images: [
       bag,
@@ -203,7 +203,7 @@ export const WISHES = [
     id: 13,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 24.99,
     description: 'nice',
     images: [
       bag,
@@ -218,7 +218,7 @@ export const WISHES = [
     id: 14,
     title: 'Top',
     brand: 'Asos',
-    price: '$20',
+    price: 19.50,
     description: 'nice',
     images: [
       bag,
