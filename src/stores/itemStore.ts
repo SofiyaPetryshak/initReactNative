@@ -1,10 +1,10 @@
 import { action, computed, observable } from 'mobx'
 
 import { ITEMS } from '$src/items'
-import { Wish } from '$src/types/types'
+import { Item } from '$src/types/types'
 
 class ItemStore {
-  @observable items:Wish[]
+  @observable items:Item[]
   constructor () {
     this.items = ITEMS
   }
@@ -24,5 +24,4 @@ class ItemStore {
   }
 }
 
-const itemStore = new ItemStore()
-export default itemStore
+export default ItemStore

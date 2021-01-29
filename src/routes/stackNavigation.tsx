@@ -2,8 +2,8 @@ import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
+import ItemModalScreen from './itemModal'
 import BottomNavigation from './tabNavigation'
-import WishModalScreen from './wishModal'
 
 const RootStack = createStackNavigator()
 function RootStackScreen () {
@@ -19,8 +19,8 @@ function RootStackScreen () {
           }}
         />
         <RootStack.Screen
-          name='Wish'
-          component={WishModalScreen}
+          name='Item'
+          component={ItemModalScreen}
           options={{
             headerShown: false,
           }}

@@ -1,6 +1,6 @@
 import { ImageSourcePropType } from 'react-native'
 
-interface Wish {
+interface Item {
   id:number;
   title: string;
   brand: string;
@@ -10,4 +10,4 @@ interface Wish {
   liked: boolean;
   color: string;
 }
-export { Wish }
+export { Item }

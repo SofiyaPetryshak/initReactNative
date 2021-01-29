@@ -2,8 +2,6 @@
 import React, { useState } from 'react'
 import { Dimensions, Image, ImageSourcePropType, NativeScrollEvent, NativeSyntheticEvent, ScrollView, StyleSheet, Text, View } from 'react-native'
 
-import { Wish } from '../types/types'
-
 const { width } = Dimensions.get('window')
 const height = width
 
