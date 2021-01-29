@@ -8,27 +8,28 @@ import { StackNavigationProp } from '@react-navigation/stack'
 import { observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
+import createInfoAlert from '../components/infoAlert'
 import PickerModal from '../components/pickerModal'
 import Slider from '../components/slider'
-import { Wish } from '../types/types'
+import { Item } from '../types/types'
 
-import itemStore from '$src/stores/itemStore'
+import { bagStore, itemStore } from '$src/stores/index'
 
 const SIZES = ['s', 'm', 'l']
 
-type WishStackParamList = {
-  Wish: { item: Wish }
+type ItemStackParamList = {
+  Item: { item: Item }
 };
 
-type WishScreenNavigationProp = StackNavigationProp<WishStackParamList, 'Wish'>;
-type WishScreenRouteProp = RouteProp<WishStackParamList, 'Wish'>;
+type ItemScreenNavigationProp = StackNavigationProp<ItemStackParamList, 'Item'>;
+type ItemScreenRouteProp = RouteProp<ItemStackParamList, 'Item'>;
 
 type Props = {
-  navigation: WishScreenNavigationProp;
-  route: WishScreenRouteProp;
+  navigation: ItemScreenNavigationProp;
+  route: ItemScreenRouteProp;
 };
 
-function WishModalScreen ({ route, navigation }:Props) {
+function ItemModalScreen ({ route, navigation }:Props) {
   const { item } = route.params
 
   const [showPicker, setShowPicker] = useState<string>('')
@@ -36,6 +37,14 @@ function WishModalScreen ({ route, navigation }:Props) {
 
   const handleChange = (value: string) => {
     setSize(value)
+  }
+  const handleAddToBag = () => {
+    if (!bagStore.getItemsInBag.includes(item)) {
+      bagStore.addToBag(item)
+    } else {
+      createInfoAlert('This item is already in the bag')
+    }
+    navigation.goBack()
   }
   return (
     <View style={styles.container}>
@@ -82,7 +91,7 @@ function WishModalScreen ({ route, navigation }:Props) {
         }}
         titleStyle={{ fontWeight: 'bold', fontSize: 20 }}
         title='ADD TO BAG'
-        onPress={() => { console.log('added to bag') }}
+        onPress={() => { handleAddToBag() }}
       />
     </View>
   )
@@ -122,4 +131,4 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 })
-export default observer(WishModalScreen)
+export default observer(ItemModalScreen)

@@ -1,12 +1,11 @@
 import { action, computed, observable } from 'mobx'
 
-import { ITEMS } from '$src/items'
-import { Wish } from '$src/types/types'
+import { Item } from '$src/types/types'
 
-class bagStore {
-  @observable itemsInBag:Wish[] = []
+class BagStore {
+  @observable itemsInBag:Item[] = []
 
-  @computed get count () {
+  @computed get countItemsInBag () {
     return this.itemsInBag.length
   }
 
@@ -19,12 +18,12 @@ class bagStore {
   }
 
   @action.bound
-  addToBag (item:Wish) {
+  addToBag (item:Item) {
     this.itemsInBag.push(item)
   }
 
   @action.bound
-  removeFromBag (item:Wish) {
+  removeFromBag (item:Item) {
     const index = this.itemsInBag.indexOf(item)
     if (index >= 0) {
       this.itemsInBag.splice(index, 1)
@@ -35,3 +34,4 @@ class bagStore {
     return this.itemsInBag
   }
 }
+export default BagStore
