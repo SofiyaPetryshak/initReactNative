@@ -1,4 +1,4 @@
-import { action, computed, observable } from 'mobx'
+import { action, computed, observable, toJS } from 'mobx'
 
 import { ITEMS } from '$src/items'
 import { Item } from '$src/types/types'
@@ -13,10 +13,14 @@ class ItemStore {
     return this.items.filter(item => item.liked === true)
   }
 
-  get likedItemsCount () {
+  @computed get likedItemsCount () {
     return this.items.filter(
       item => item.liked === true,
     ).length
+  }
+
+  @computed get allItems () {
+    return toJS(this.items)
   }
 
   @action toggleLike (id:number) {

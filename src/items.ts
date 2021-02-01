@@ -22,7 +22,7 @@ export const ITEMS = [
   },
   {
     id: 1,
-    title: 'Skirt',
+    title: 'In The Style x Billie Faiers roll neck knitted dress with belt in pink',
     brand: 'Bershka',
     price: 30.00,
     description: 'nice',
@@ -38,8 +38,8 @@ export const ITEMS = [
   },
   {
     id: 2,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'Monki Nonna cotton ribbed square neck top in black',
+    brand: 'Monki Nonna',
     price: 149.99,
     description: 'nice',
     images: [
@@ -54,8 +54,8 @@ export const ITEMS = [
   },
   {
     id: 3,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'adidas Originals mesh logo co ord in blue',
+    brand: 'Adidas',
     price: 90.00,
     description: 'nice',
     images: [
@@ -70,8 +70,8 @@ export const ITEMS = [
   },
   {
     id: 4,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'Daisy Street Plus mom jeans in bleach denim',
+    brand: 'Daisy Street',
     price: 20.99,
     description: 'nice',
     images: [
@@ -86,8 +86,8 @@ export const ITEMS = [
   },
   {
     id: 5,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'Nike Air Force 1 Shadow in pale blue and mint multi',
+    brand: 'Nike',
     price: 10.00,
     description: 'nice',
     images: [
@@ -102,7 +102,7 @@ export const ITEMS = [
   },
   {
     id: 6,
-    title: 'Top',
+    title: 'ASOS DESIGN denim co-ord in sage cord',
     brand: 'Asos',
     price: 13.00,
     description: 'nice',
@@ -118,8 +118,8 @@ export const ITEMS = [
   },
   {
     id: 7,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'COLLUSION reverse loopback tie dye swirl print hoodie',
+    brand: 'COLLUSION',
     price: 67.99,
     description: 'nice',
     images: [
@@ -134,8 +134,8 @@ export const ITEMS = [
   },
   {
     id: 8,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'South Beach exaggerated wire bikini set in gold metallic',
+    brand: 'South Beach',
     price: 55.90,
     description: 'nice',
     images: [
@@ -150,8 +150,8 @@ export const ITEMS = [
   },
   {
     id: 9,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'Kaz Bands headband with twist knot in red satin',
+    brand: 'Kaz Bands',
     price: 44.43,
     description: 'nice',
     images: [
@@ -166,8 +166,8 @@ export const ITEMS = [
   },
   {
     id: 10,
-    title: 'Top',
-    brand: 'Asos',
+    title: 'New Look waist enhance mom jeans in mid blue',
+    brand: 'New Look',
     price: 12.99,
     description: 'nice',
     images: [
