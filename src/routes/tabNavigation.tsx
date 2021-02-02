@@ -69,7 +69,7 @@ const SearchStack = createStackNavigator()
 function SearchStackScreen () {
   return (
     <SearchStack.Navigator>
-      <SearchStack.Screen name='Search' component={SearchScreen} />
+      <SearchStack.Screen name='Search' component={SearchScreen} options={{ headerShown: false }} />
     </SearchStack.Navigator>
   )
 }

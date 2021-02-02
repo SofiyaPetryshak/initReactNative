@@ -19,6 +19,7 @@ export const ITEMS = [
     liked: true,
     color: 'black',
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 1,
@@ -35,6 +36,7 @@ export const ITEMS = [
     color: 'black',
     liked: true,
     quantity: 0,
+    category: 'skirts',
   },
   {
     id: 2,
@@ -51,6 +53,7 @@ export const ITEMS = [
     liked: true,
     color: 'black',
     quantity: 0,
+    category: 'shoes',
   },
   {
     id: 3,
@@ -67,6 +70,7 @@ export const ITEMS = [
     liked: true,
     color: 'black',
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 4,
@@ -83,6 +87,7 @@ export const ITEMS = [
     liked: true,
     color: 'black',
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 5,
@@ -99,6 +104,7 @@ export const ITEMS = [
     liked: true,
     color: 'black',
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 6,
@@ -131,6 +137,7 @@ export const ITEMS = [
     color: 'black',
     liked: false,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 8,
@@ -147,6 +154,7 @@ export const ITEMS = [
     color: 'black',
     liked: false,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 9,
@@ -163,6 +171,7 @@ export const ITEMS = [
     color: 'black',
     liked: true,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 10,
@@ -179,6 +188,7 @@ export const ITEMS = [
     color: 'black',
     liked: true,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 11,
@@ -195,6 +205,7 @@ export const ITEMS = [
     color: 'black',
     liked: false,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 12,
@@ -211,6 +222,7 @@ export const ITEMS = [
     color: 'black',
     liked: false,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 13,
@@ -227,6 +239,7 @@ export const ITEMS = [
     color: 'black',
     liked: true,
     quantity: 0,
+    category: 'accessories',
   },
   {
     id: 14,
@@ -243,6 +256,7 @@ export const ITEMS = [
     color: 'black',
     liked: true,
     quantity: 0,
+    category: 'accessories',
   },
 
 ]

@@ -5,8 +5,10 @@ import { Item } from '$src/types/types'
 
 class ItemStore {
   @observable items:Item[]
+  @observable filtered:Item[]
   constructor () {
     this.items = ITEMS
+    this.filtered = []
   }
 
   @computed get likedItems () {
@@ -21,6 +23,16 @@ class ItemStore {
 
   @computed get allItems () {
     return toJS(this.items)
+  }
+
+  @action filterItems (input:string) {
+    if (!input) {
+      this.filtered = []
+    } else {
+      this.filtered = this.items.filter(item => {
+        return item.title.toLowerCase().match(input.toLowerCase().trim())
+      })
+    }
   }
 
   @action toggleLike (id:number) {
