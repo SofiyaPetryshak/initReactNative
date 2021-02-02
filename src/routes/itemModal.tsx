@@ -8,7 +8,6 @@ import { StackNavigationProp } from '@react-navigation/stack'
 import { observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
-import createInfoAlert from '../components/infoAlert'
 import CustomPicker from '../components/picker'
 import Slider from '../components/slider'
 import { Item } from '../types/types'
