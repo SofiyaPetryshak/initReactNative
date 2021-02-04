@@ -6,7 +6,7 @@ interface Item {
   brand: string;
   price: number;
   description: string;
-  images: ImageSourcePropType[];
+  images: string[];
   liked: boolean;
   color: string;
   quantity:number;

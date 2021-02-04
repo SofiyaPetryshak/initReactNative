@@ -7,7 +7,7 @@ module.exports = {
     },
     "useJSXTextNode": true,
   },
-  "plugins": ["@typescript-eslint", "react", "react-native", "react-hooks", "import", "simple-import-sort"],
+  "plugins": ["@typescript-eslint", "react", "react-native", "react-hooks", "import", "simple-import-sort", "qraphql"],
   "extends": ["plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:react-native/all", "standard", "standard-jsx"],
   "rules": {
     "comma-dangle": ["warn", "always-multiline"],
@@ -31,6 +31,14 @@ module.exports = {
         "JSXAttribute",
         "JSXSpreadAttribute",
       ]
+    }],
+    "graphql/template-strings": ['error', {
+      env: 'apollo',
+      schemaJson: require('./schema.json'),
+    }],
+
+    "graphql/named-operations": ['error', {
+      schemaJson: require('./schema.json'),
     }],
     "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "no-public" }],
     "no-unused-vars": "off",

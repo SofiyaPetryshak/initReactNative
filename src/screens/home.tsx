@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlatList, SafeAreaView, StyleSheet, View } from 'react-native'
 
 import CenterImageItem from '../components/centerImageItem'
@@ -9,6 +9,9 @@ import { Item } from '$src/types/types'
 const PRODUCT_ITEM_OFFSET = 5
 
 export default function HomeScreen ({ navigation }: { navigation: any }) {
+  useEffect(() => {
+    itemStore.initialize()
+  }, [])
   const [selectedId, setSelectedId] = useState(0)
 
   const onItemPress = (item: Item) => {
@@ -33,7 +36,7 @@ export default function HomeScreen ({ navigation }: { navigation: any }) {
           style={styles.listContainer}
           numColumns={2}
           horizontal={false}
-          data={itemStore.allItems}
+          data={itemStore.items}
           renderItem={renderItem}
           keyExtractor={(item: Item) => `Item-${item.id}`}
           extraData={selectedId}

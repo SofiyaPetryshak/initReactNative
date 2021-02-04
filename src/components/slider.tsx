@@ -1,11 +1,11 @@
 /* eslint-disable react-native/no-color-literals */
 import React, { useState } from 'react'
-import { Dimensions, Image, ImageSourcePropType, NativeScrollEvent, NativeSyntheticEvent, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, NativeScrollEvent, NativeSyntheticEvent, ScrollView, StyleSheet, Text, View } from 'react-native'
 
 const { width } = Dimensions.get('window')
 const height = width
 
-function Slider ({ images }: {images:ImageSourcePropType[]}) {
+function Slider ({ images }: {images:string[]}) {
   const [shownImage, setShownImage] = useState(0)
 
   const onImageChange = (event : NativeSyntheticEvent<NativeScrollEvent>):void => {
@@ -25,10 +25,10 @@ function Slider ({ images }: {images:ImageSourcePropType[]}) {
         style={styles.scroll}
       >
         {
-          images.map((image:ImageSourcePropType, id:number) => (
+          images.map((image:string, id:number) => (
             <Image
               key={id}
-              source={image}
+              source={{uri:image}}
               style={styles.image}
             />
           ))
@@ -36,7 +36,7 @@ function Slider ({ images }: {images:ImageSourcePropType[]}) {
       </ScrollView>
       <View style={styles.pagination}>
         {
-          images.map((i:ImageSourcePropType, k:number) => (
+          images.map((i:string, k:number) => (
             <Text key={k} style={k === shownImage ? styles.pagingActiveText : styles.pagingText}>⬤</Text>
           ))
         }
