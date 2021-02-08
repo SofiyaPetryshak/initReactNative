@@ -3,7 +3,7 @@ import { AppRegistry } from 'react-native'
 import { ApolloProvider } from '@apollo/client'
 
 import RootStackScreen from './src/routes/stackNavigation'
-import { client } from './apolloClient'
+import  client  from './apolloClient'
 
 function App () {
   return (

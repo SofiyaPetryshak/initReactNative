@@ -3,10 +3,9 @@ module.exports = {
     includes: ['./imports/**/*.js'],
     service: {
       name: 'my-server',
-      url: 'http://localhost:4000/graphql',
+      url: 'http://localhost:4000/graphql/',
       // optional disable SSL validation check
       skipSSLValidation: true
     },
-
   }
 };

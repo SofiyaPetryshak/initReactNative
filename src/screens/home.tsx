@@ -5,10 +5,11 @@ import CenterImageItem from '../components/centerImageItem'
 import { itemStore } from '../stores/index'
 
 import { Item } from '$src/types/types'
+import { observer } from 'mobx-react'
 
 const PRODUCT_ITEM_OFFSET = 5
 
-export default function HomeScreen ({ navigation }: { navigation: any }) {
+ function HomeScreen ({ navigation }: { navigation: any }) {
   useEffect(() => {
     itemStore.initialize()
   }, [])
@@ -45,6 +46,7 @@ export default function HomeScreen ({ navigation }: { navigation: any }) {
     </View>
   )
 }
+export default observer(HomeScreen)
 
 const styles = StyleSheet.create({
   container: {

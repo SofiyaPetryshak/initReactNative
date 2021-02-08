@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-import { client } from '../../apolloClient'
+import client from '../../apolloClient'
 
 const GetItems = gql`
 query GetItems{

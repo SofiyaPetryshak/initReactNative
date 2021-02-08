@@ -58,7 +58,7 @@ type Item {
 type Mutation {
   addItem(title: String!, brand: String!, price: Float!, description: String!, images: [String]!, color: String!, liked: Boolean!, quantity: Int!): Item
   deleteItem(id: Int!): Item
-  editItem(id: Int!, title: String, brand: String, price: Float, description: String, images: [String], color: String, liked: Boolean, quantity: Int): Item
+  removeFromLiked(id: Int!, liked: Boolean): Item
 }
 
 type RootQueryType {

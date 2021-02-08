@@ -2,11 +2,14 @@ import { action, computed, observable, toJS } from 'mobx'
 
 import { Item } from '$src/types/types'
 import {getItems} from '../queries/getItems'
+import {delFromLiked} from '../queries/unlike'
 
 class ItemStore {
   @observable _items:Item[]
+  @observable filtered:Item[]
   constructor () {
     this._items = []
+    this.filtered = []
   }
   async initialize (): Promise<void> {
     this._items = await getItems()
@@ -33,7 +36,7 @@ class ItemStore {
     if (!input) {
       this.filtered = []
     } else {
-      this.filtered = this.items.filter(item => {
+      this.filtered = this._items.filter(item => {
         return item.title.toLowerCase().match(input.toLowerCase().trim())
       })
     }
@@ -43,8 +46,8 @@ class ItemStore {
     this._items[id].liked = !this._items[id].liked
   }
 
-  @action removeFromLiked (id:number) {
-    this._items[id].liked = false
+  @action async removeFromLiked (id:number) {
+    await delFromLiked(id, false)
   }
 }
 

@@ -383,7 +383,7 @@
             "deprecationReason": null
           },
           {
-            "name": "editItem",
+            "name": "removeFromLiked",
             "description": null,
             "args": [
               {
@@ -401,85 +401,11 @@
                 "defaultValue": null
               },
               {
-                "name": "title",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "brand",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "price",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Float",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "description",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "images",
-                "description": null,
-                "type": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "color",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
                 "name": "liked",
                 "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "Boolean",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "quantity",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
                   "ofType": null
                 },
                 "defaultValue": null
