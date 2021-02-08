@@ -2,10 +2,9 @@
 import React, { useState } from 'react'
 import { FlatList, SafeAreaView, StyleSheet, TextInput, View } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack'
-import { Observer, observer } from 'mobx-react'
+import { observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
-import { CATEGORIES } from '../categories'
 import { itemStore } from '../stores/index'
 
 import CategoriesList from '$src/components/categoriesList'

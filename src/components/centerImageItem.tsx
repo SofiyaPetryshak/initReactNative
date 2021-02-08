@@ -26,7 +26,7 @@ const CenterImageItem = ({ item, onPress }:ItemProps) => {
         <Image
           style={styles.image}
           resizeMode='cover'
-          source={item.images[0]}
+          source={{uri:item.images[0]}}
         />
         <View style={styles.priceLikeRow}>
           <Text style={styles.priceText}>${item.price}</Text>

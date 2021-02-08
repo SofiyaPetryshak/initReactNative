@@ -9,8 +9,8 @@ import { observer } from 'mobx-react'
 import { bagStore } from '../stores/index'
 import { globalStyles } from '../styles/global'
 
-import SideImageItem from '$src/components/sideImageItem'
-import { Item } from '$src/types/types'
+import SideImageItem from '../components/sideImageItem'
+import { Item } from '../types/types'
 
 type ItemsStackParamList = {
   Item: { item: Item }

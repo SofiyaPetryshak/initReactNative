@@ -1,46 +1,53 @@
 import { action, computed, observable, toJS } from 'mobx'
 
-import { ITEMS } from '$src/items'
 import { Item } from '$src/types/types'
+import {getItems} from '../queries/getItems'
+import {delFromLiked} from '../queries/unlike'
 
 class ItemStore {
-  @observable items:Item[]
+  @observable _items:Item[]
   @observable filtered:Item[]
   constructor () {
-    this.items = ITEMS
+    this._items = []
     this.filtered = []
+  }
+  async initialize (): Promise<void> {
+    this._items = await getItems()
+  }
+  get items () {
+    return this._items
   }
 
   @computed get likedItems () {
-    return this.items.filter(item => item.liked === true)
+    return this._items.filter(item => item.liked === true)
   }
 
   @computed get likedItemsCount () {
-    return this.items.filter(
+    return this._items.filter(
       item => item.liked === true,
     ).length
   }
 
   @computed get allItems () {
-    return toJS(this.items)
+    return toJS(this._items)
   }
 
   @action filterItems (input:string) {
     if (!input) {
       this.filtered = []
     } else {
-      this.filtered = this.items.filter(item => {
+      this.filtered = this._items.filter(item => {
         return item.title.toLowerCase().match(input.toLowerCase().trim())
       })
     }
   }
 
   @action toggleLike (id:number) {
-    this.items[id].liked = !this.items[id].liked
+    this._items[id].liked = !this._items[id].liked
   }
 
-  @action removeFromLiked (id:number) {
-    this.items[id].liked = false
+  @action async removeFromLiked (id:number) {
+    await delFromLiked(id, false)
   }
 }
 

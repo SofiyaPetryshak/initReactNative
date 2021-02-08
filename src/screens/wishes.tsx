@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-color-literals */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlatList, SafeAreaView, View } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { observer } from 'mobx-react'
@@ -21,6 +21,9 @@ type Props = {
 }
 
 const WishesScreen = ({ navigation }: Props) => {
+  useEffect(() => {
+    itemStore.initialize()
+  }, [])
   const [selectedId, setSelectedId] = useState(0)
 
   const onWishItemPress = (item: Item) => {

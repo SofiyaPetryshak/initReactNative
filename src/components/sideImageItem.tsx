@@ -29,7 +29,7 @@ const SideImageItem = ({ item, onPress, onSwipeFromRight, rightActionText }:Item
             <Image
               style={styles.image}
               resizeMode='cover'
-              source={item.images[0]}
+              source={{uri:item.images[0]}}
             />
             <View>
               <Text style={styles.price}>${item.price.toFixed(2)}</Text>
