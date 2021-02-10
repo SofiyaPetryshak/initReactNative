@@ -6,7 +6,8 @@ module.exports = {
   transform: {
     "^.+\\.ts?$": "ts-jest",
     "^.+\\.tsx?$": "ts-jest",
-    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileTransformer.js"
   },
   globals: {
     "ts-jest": {
@@ -22,5 +23,7 @@ module.exports = {
       "json",
       "node"
     ],
-    transformIgnorePatterns: []
+    transformIgnorePatterns: [
+      "/!node_modules\\/@expo"
+    ]
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import CenterImageItem from '../../src/components/centerImageItem'
 
+jest.useFakeTimers()
 const mockItem = {
   id: 0,
   title: "ASOS DESIGN bag with detachable strap",
@@ -20,7 +21,7 @@ const mockItem = {
 }
 
  test('renders correctly', () => {
-   const tree = renderer.create(<CenterImageItem item={mockItem} onPress={()=>{console.log('mock item')}} />).toJSON()
+   const tree = renderer.create(<CenterImageItem item={mockItem} onPress={jest.fn()} />).toJSON()
    expect(tree).toMatchSnapshot()
  });
 
