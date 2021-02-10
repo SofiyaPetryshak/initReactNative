@@ -20,7 +20,7 @@ const mockItem = {
   quantity: 0
 }
 
- test('renders correctly', () => {
+ test('renders correctly', async () => {
    const tree = renderer.create(<CenterImageItem item={mockItem} onPress={jest.fn()} />).toJSON()
    expect(tree).toMatchSnapshot()
  });

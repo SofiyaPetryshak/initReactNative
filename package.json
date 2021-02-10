@@ -10,7 +10,7 @@
     "graphql-schema": "npx apollo client:download-schema ./schema.graphql && npx apollo client:download-schema ./schema.json",
     "dev:server": "nodemon ./src/server/server.js",
     "json:server": "json-server --watch ./src/server/data.json",
-    "test": "jest"
+    "test": "node ./node_modules/jest/bin/jest.js --config jest.config.js"
   },
   "dependencies": {
     "@apollo/client": "^3.3.7",
@@ -22,16 +22,12 @@
     "axios": "^0.21.1",
     "expo": "~40.0.0",
     "expo-status-bar": "~1.0.3",
-    "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
-    "json-server": "^0.16.3",
     "mobx": "^5.15.0",
     "mobx-react": "^6.2.5",
-    "nodemon": "^2.0.7",
-    "react": "^16.13.1 || ^17",
+    "react": "^16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native": "0.63.4",
     "react-native-elements": "^3.1.0",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-reanimated": "~1.13.0",
