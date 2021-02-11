@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-import client from '../../apolloClient'
+import client from '../apolloClient'
 
 const RemoveFromLiked = gql`
 mutation removeFromLiked($id:Int!, $liked:Boolean!){

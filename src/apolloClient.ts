@@ -1,12 +1,9 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
-import { onError } from "@apollo/client/link/error";
-
-
+import 'cross-fetch/polyfill'
 
  const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql/',
   cache: new InMemoryCache(),
-
 })
 
 client.defaultOptions = {

@@ -4,6 +4,7 @@ import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'rea
 import { observer } from 'mobx-react'
 import { Ionicons } from '@expo/vector-icons'
 
+
 import { itemStore } from '$src/stores/index'
 import { Item } from '$src/types/types'
 
