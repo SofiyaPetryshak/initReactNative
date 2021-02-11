@@ -25,5 +25,6 @@ module.exports = {
     ],
     transformIgnorePatterns: [
       "/!node_modules\\/@expo"
-    ]
+    ],
+    setupFilesAfterEnv: ['<rootDir>setup-tests.js'],
 }
