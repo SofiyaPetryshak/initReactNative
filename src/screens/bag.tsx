@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-color-literals */
 import React, { useState } from 'react'
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import { Button, Divider } from 'react-native-elements'
+import { Button } from 'react-native-elements'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { observer } from 'mobx-react'
 

@@ -1,4 +1,4 @@
-import { action, computed, observable } from 'mobx'
+import { action, computed, observable, toJS } from 'mobx'
 
 import { Item } from '$src/types/types'
 
@@ -17,27 +17,30 @@ class BagStore {
     return total
   }
 
-  @action.bound
+  @action
   addToBag (item:Item) {
     this.itemsInBag.push(item)
     item.quantity++
   }
 
-  @action.bound
+  @action
   removeFromBag (item:Item) {
-    const index = this.itemsInBag.indexOf(item)
-    if (index >= 0) {
+
+    item.quantity--
+    const index = this.itemsInBag.findIndex((el) => el.id === item.id)
+    if (index!==undefined) {
       this.itemsInBag.splice(index, 1)
     }
+    console.warn(this.itemsInBag)
   }
 
-  @action.bound
+  @action
   increaseQuantity (item:Item) {
     item.quantity++
   }
 
   @computed get getItemsInBag () {
-    return this.itemsInBag
+    return toJS(this.itemsInBag)
   }
 }
 export default BagStore
